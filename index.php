@@ -1,6 +1,5 @@
 <?php require 'components/navbar.php' ?>
 
-
 <section id="showcase" class="py-5">
     <div class="dark-overlay">
         <div class="container">
@@ -19,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="img/showoff1.jpg" class="img-fluid mb-3 rounded shadow">
+                <img src="assets/img/showoff1.jpg" class="img-fluid mb-3 rounded shadow">
             </div>
             <div class="col-md-6">
                 <h2>Clown Fish</h2>
@@ -53,7 +52,7 @@
                     yang dirilis tahun 2016. Dalam film tersebut.</p>
             </div>
             <div class="col-md-6">
-                <img src="img/showoff2.jpg" alt="" class="img-fluid mb-3 rounded shadow">
+                <img src="assets/img/showoff2.jpg" alt="" class="img-fluid mb-3 rounded shadow">
             </div>
         </div>
     </div>

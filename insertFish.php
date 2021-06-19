@@ -18,7 +18,7 @@
         if($error === 0){
             $pesan_error = "";
 
-            $nama_folder = "aset";
+            $nama_folder = "assets/img";
             $tmp = $_FILES["gambarIkan"]["tmp_name"];
             $path_file = "$nama_folder/$gambarIkan";
             $upload_gagal = false;
@@ -61,13 +61,13 @@
                 }
             }
     ?>
-    <form action="crud.php" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
+    <form action="insertFish.php" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
         <div class="form-group">
             <label for="kategoriIkan">Kategori Ikan</label>
             <select id="kategoriIkan" class="form-control" name="kategoriIkan">
                 <option value="1">Ikan Hias</option>
-                <option value="1">Ikan Laut</option>
-                <option value="1">Ikan Predator</option>
+                <option value="2">Ikan Laut</option>
+                <option value="3">Ikan Predator</option>
             </select>
         </div>
         <div class="form-group">
@@ -95,6 +95,5 @@
 </div>
 
 <?php
-    mysqli_close($db);
     include "components/footer.php";
 ?>

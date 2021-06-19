@@ -44,7 +44,8 @@
 
 /* Ikan */
 #ikanHias {
-    background: url(../img/hiasMaskoki.jpg);
+    background: url(../img/showoff1.jpg
+    );
     height: 350px;
     padding-top: 150px;
     background-size:cover;
@@ -54,7 +55,7 @@
 }
 
 #ikanPredator {
-    background: url(../img/ikanPredator.jpg);
+    background: url(../img/showoff2.jpg);
     height: 350px;
     padding-top: 150px;
     background-size:cover;
@@ -64,7 +65,7 @@
 }
 
 #ikanLaut {
-    background: url(../img/ikanLaut.jpg);
+    background: url(../img/showoff1.jpg);
     height: 350px;
     padding-top: 150px;
     background-size:cover;

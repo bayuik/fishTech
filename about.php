@@ -5,7 +5,7 @@
         <h1 class="text-center mb-5">About Us</h1>
         <div class="row">
             <div class="col-md-6">
-                <img src="img/about.jpg" alt="" class="img-fluid mb-3 rounded shadow">
+                <img src="assets/img/about.jpg" alt="" class="img-fluid mb-3 rounded shadow">
             </div>
             <div class="col-md-6">
                 <p class="lead">FishTech adalah website penyedia informasi tentang berbagai jenis ikan seperti ikan

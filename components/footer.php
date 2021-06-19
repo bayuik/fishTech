@@ -3,10 +3,10 @@
         <p>&copy; 2021</p>
     </footer>
 
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script>
     AOS.init({
         once: true,
