@@ -1,15 +1,13 @@
-<?php include "components/navbar.php" ?>
-
 <?php
-$db = mysqli_connect('localhost', 'root', '', 'fishtech');
-    if(!$db){
-        die ('koneksi dengan database gagal '. mysqli_connect_error());
-    }
+    include "connection.php";
 
-    $idIkan = 1;
+    $idIkan = $_GET["id"];
+
+
 
     if(isset($_POST['submit'])){
         $error = $_FILES['gambarIkan']['error'];
+        global $idIkan;
 
         $kategoriIkan = $_POST["kategoriIkan"];
         $namaIkan = $_POST["namaIkan"];
@@ -17,7 +15,7 @@ $db = mysqli_connect('localhost', 'root', '', 'fishtech');
         $deskripsiIkan = $_POST["deskripsiIkan"];
         $reproduksiIkan = $_POST["reproduksiIkan"];
         $perawatanIkan = $_POST["perawatanIkan"];
-        $query = "UPDATE ikan SET ID_KATEGORI = $kategoriIkan, NAMA_IKAN = $namaIkan, GAMBAR = $gambarIkan, DESKRIPSI = $deskripsiIkan, REPRODUKSI_IKAN = $reproduksiIkan, PERAWATAN = $perawatanIkan WHERE ID_IKAN = $idIkan";
+
         if($error === 0){
             $pesan_error = "";
 
@@ -45,10 +43,7 @@ $db = mysqli_connect('localhost', 'root', '', 'fishtech');
             }
         }
 
-        $insertDb = mysqli_query($db, $query);
-        if(!$insertDb){
-            die ("Query error " . mysqli_error($db));
-        }
+        updateFish($idIkan, $kategoriIkan, $namaIkan, $gambarIkan, $deskripsiIkan, $reproduksiIkan, $perawatanIkan);
     }
 ?>
 
@@ -64,7 +59,7 @@ $db = mysqli_connect('localhost', 'root', '', 'fishtech');
                 }
             }
     ?>
-    <form action="insertFish.php" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
+    <form action="updateFish.php?id=<?= $idIkan ?>" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
         <div class="form-group">
             <label for="kategoriIkan">Kategori Ikan</label>
             <select id="kategoriIkan" class="form-control" name="kategoriIkan">

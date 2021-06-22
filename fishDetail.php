@@ -1,10 +1,7 @@
 <?php include "components/navbar.php" ?>
 
 <?php 
-        $db = mysqli_connect('localhost', 'root', '', 'fishtech');
-        if(!$db){
-            die ('koneksi dengan database gagal '. mysqli_connect_error());
-        }
+    include "connection.php";
 
         $idIkan = $_GET["id"];
 

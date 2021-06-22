@@ -1,8 +1,5 @@
 <?php
-    $db = mysqli_connect('localhost', 'root', '', 'fishtech');
-    if(!$db){
-        die ('koneksi dengan database gagal '. mysqli_connect_error());
-    }
+    include "connection.php";
 
     $idCategory = $_GET['idCategory'];
 
