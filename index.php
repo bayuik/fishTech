@@ -73,4 +73,6 @@
     </div>
 </section>
 
+
+
 <?php require 'components/footer.php' ?>

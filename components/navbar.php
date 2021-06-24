@@ -3,6 +3,7 @@
 ?>
 
 <!doctype html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,7 +32,8 @@
                         </a>
                         <div class="dropdown-menu">
                             <?php for($i = 0; $i < count($selectFish); $i++): ?>
-                                <a href="selectFish.php?idCategory=<?= $i+1 ?>" class="dropdown-item"><?= $selectFish[$i]; ?></a>
+                            <a href="selectFish.php?idCategory=<?= $i+1 ?>"
+                                class="dropdown-item"><?= $selectFish[$i]; ?></a>
                             <?php endfor; ?>
                         </div>
                     </li>

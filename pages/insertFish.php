@@ -1,14 +1,7 @@
 <?php
-    include "connection.php";
-
-    $idIkan = $_GET["id"];
-
-
-
+    require "../components/connection.php";
     if(isset($_POST['submit'])){
         $error = $_FILES['gambarIkan']['error'];
-        global $idIkan;
-
         $kategoriIkan = $_POST["kategoriIkan"];
         $namaIkan = $_POST["namaIkan"];
         $gambarIkan = $_FILES["gambarIkan"]["name"];
@@ -19,7 +12,7 @@
         if($error === 0){
             $pesan_error = "";
 
-            $nama_folder = "assets/img";
+            $nama_folder = "../assets/img";
             $tmp = $_FILES["gambarIkan"]["tmp_name"];
             $path_file = "$nama_folder/$gambarIkan";
             $upload_gagal = false;
@@ -43,12 +36,12 @@
             }
         }
 
-        updateFish($idIkan, $kategoriIkan, $namaIkan, $gambarIkan, $deskripsiIkan, $reproduksiIkan, $perawatanIkan);
+        insertFish($kategoriIkan, $namaIkan, $gambarIkan, $deskripsiIkan, $reproduksiIkan, $perawatanIkan);
+        header("Location: admin.php");
     }
 ?>
 
-<?php include "components/navbar.php" ?>
-
+<?php require "../components/navbarAdmin.php" ?>
 <div class="w-50 mx-auto my-5 pt-5">
     <?php
             if(!empty($pesan_error)){
@@ -59,13 +52,13 @@
                 }
             }
     ?>
-    <form action="updateFish.php?id=<?= $idIkan ?>" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
+    <form action="insertFish.php" method="post" class="mt-5 pt-5" enctype="multipart/form-data">
         <div class="form-group">
             <label for="kategoriIkan">Kategori Ikan</label>
             <select id="kategoriIkan" class="form-control" name="kategoriIkan">
-                <option value="1">Ikan Hias</option>
-                <option value="2">Ikan Laut</option>
-                <option value="3">Ikan Predator</option>
+                <?php for($i = 0; $i < count($Fish); $i++): ?>
+                    <option value="<?= $i+1 ?>"><?= $Fish[$i] ?></option>
+                <?php endfor; ?>
             </select>
         </div>
         <div class="form-group">
@@ -92,4 +85,4 @@
     </form>
 </div>
 
-<?php include "components/footer.php" ?>
+<?php include "../components/footer.php"; ?>

@@ -8,11 +8,11 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script>
-    AOS.init({
-        once: true,
-        duration: 800,
-    });
-    </script>
+        AOS.init({
+            once: true,
+            duration: 800,
+        });
+</script>
 </body>
 
 </html>

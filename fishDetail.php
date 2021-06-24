@@ -1,7 +1,5 @@
-<?php include "components/navbar.php" ?>
-
 <?php 
-    include "connection.php";
+    include "components/connection.php";
 
         $idIkan = $_GET["id"];
 
@@ -20,6 +18,7 @@
         $category = mysqli_fetch_assoc(mysqli_query($db,$queryCategory));
 ?>
 
+<?php include "components/navbar.php" ?>
 <section class="container pt-5">
     <nav>
         <ol class="breadcrumb bg-white ml-0 mt-4">
