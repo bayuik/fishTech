@@ -1,9 +1,6 @@
 <?php
     require "../components/connection.php";
 
-    $queryGambar = "SELECT GAMBAR FROM ikan";        
-    $tampilGambar = mysqli_fetch_assoc(mysqli_query($db, $queryGambar));
-
     if(isset($_POST['submit'])){
         $kategoriIkan = $_POST["kategoriIkan"];
         $namaIkan = $_POST["namaIkan"];
@@ -13,9 +10,9 @@
         $perawatanIkan = $_POST["perawatanIkan"];
         $filenameUpdate = $_POST["filenameUpdate"];
         $idIkan =  $_POST["idIkan"];
+        $pesan_error = "";
         
-        if($_FILES['gambarIkan']['error'] === 0){
-            $pesan_error = "";
+        if($filenameUpdate){
             $nama_folder = "../assets/img";
             $tmp = $_FILES["gambarIkan"]["tmp_name"];
             $path_file = "$nama_folder/$gambarIkan";
@@ -34,20 +31,21 @@
 
             if(!$upload_gagal){
                 move_uploaded_file($tmp, $path_file);
-                $pesan_error = "File sukses di upload";
+                $pesan_error = "Data ikan berhasil di Edit";
                 updateFish($idIkan, $kategoriIkan, $namaIkan, $gambarIkan, $deskripsiIkan, $reproduksiIkan, $perawatanIkan, $filenameUpdate);
+                header("Location: admin.php?m={$pesan_error}&e=0");
+            } else {
+                $pesan_error = "Data ikan berhasil di Edit";
+                updateFish($idIkan, $kategoriIkan, $namaIkan, $filenameUpdate, $deskripsiIkan, $reproduksiIkan, $perawatanIkan, $filenameUpdate);
                 header("Location: admin.php?m={$pesan_error}&e=0");
             }
         }else {
-            $pesan_error .= "File gagal di upload";
+            $pesan_error .= "Data ikan gagal di Edit";
             header("Location: admin.php?m={$pesan_error}&e=1");
         }
-
-
     }
 
     $idIkan = $_GET["id"];
-    $filename = $_GET["filename"];
     $updatePage = "SELECT * FROM ikan WHERE ID_IKAN = $idIkan";
     $showData = mysqli_fetch_assoc(mysqli_query($db, $updatePage));
 ?>
@@ -79,7 +77,7 @@
         </div>
         <div class="form-group">
             <label for="gambarIkan">Gambar Ikan</label>
-            <img src="../assets/img/<?= $tampilGambar["GAMBAR"] ?>" alt="" class="img-thumbnail w-25 d-block">
+            <img src="../assets/img/<?= $showData["GAMBAR"] ?>" alt="" class="img-thumbnail w-25 d-block">
             <input type="file" accept=".jpg, .png, .gif" name="gambarIkan" class="form-control-file d-none"
                 id="gambarIkan">
             <label for="gambarIkan" class="btn btn-secondary">Ubah Gambar</label>
@@ -99,8 +97,8 @@
             <textarea class="form-control" name="perawatanIkan" id="perawatanIkan"
                 rows="3"><?= $showData["PERAWATAN"] ?></textarea>
         </div>
-        <input type="hidden" name="idIkan" value="<?= $idIkan ?>">
-        <input type="hidden" name="filenameUpdate" value="<?= $filename ?>">
+        <input type="hidden" name="idIkan" value="<?= $showData["ID_IKAN"] ?>">
+        <input type="hidden" name="filenameUpdate" value="<?= $showData["GAMBAR"] ?>">
         <input type="submit" name="submit" class="btn btn-primary">
     </form>
 </div>

@@ -35,7 +35,7 @@
         $queryUpdate = "UPDATE ikan SET ID_KATEGORI = '$kategoriIkan', NAMA_IKAN = '$namaIkan', GAMBAR = '$gambarIkan', DESKRIPSI = '$deskripsiIkan', REPRODUKSI_IKAN = '$reproduksiIkan', PERAWATAN = '$perawatanIkan' WHERE ID_IKAN = $idIkan";
         global $db;
 
-        if(!$_FILES['gambarIkan']['error'] === UPLOAD_ERR_NO_FILE){
+        if($gambarIkan != $filenameUpdate){
             unlink("../assets/img/". $filenameUpdate);
         }
 

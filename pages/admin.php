@@ -1,6 +1,11 @@
 <?php
     include "../components/connection.php";
 
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header("Location: login.php");
+    }
+
     $select = mysqli_query($db, $queryAdmin);
 
     if(isset($_GET['id'])){
@@ -32,7 +37,19 @@
         ?>
         <h1>Data ikan</h1>
         <a href="insertFish.php" class="btn btn-secondary my-4">Add Fish</a>
-        <table class="table mx-5">
+        <table class="table mx-5 table-hover table-stripped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Ikan</th>
+                    <th>File Gambar</th>
+                    <th>Deskripsi</th>
+                    <th>Reproduksi Ikan</th>
+                    <th>Perawatan</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
             <?php $counter = 1; ?>
             <?php while($fish = mysqli_fetch_assoc($select)): ?>
             <tbody>
@@ -43,10 +60,10 @@
                     <td><?= substr($fish["DESKRIPSI"], 0, 15). "..." ?></td>
                     <td><?= substr($fish["REPRODUKSI_IKAN"], 0, 15). "..." ?></td>
                     <td><?= substr($fish["PERAWATAN"], 0, 15). "..." ?></td>
-                    <td><a href="updateFish.php<?= "?id={$fish["ID_IKAN"]}&filename={$fish["GAMBAR"]}" ?>"
-                            class="btn btn-success">Edit</a></td>
+                    <td><a href="updateFish.php<?= "?id={$fish["ID_IKAN"]}" ?>" class="btn btn-success btn-sm">Edit</a>
+                    </td>
                     <td><a href="admin.php<?= "?id={$fish["ID_IKAN"]}&filename={$fish["GAMBAR"]}" ?>"
-                            class="btn btn-danger">Delete</a></td>
+                            class="btn btn-danger btn-sm">Delete</a></td>
                 </tr>
             </tbody>
             <?php $counter++ ?>
