@@ -1,6 +1,7 @@
 <?php
     include "../components/connection.php";
 
+
     session_start();
     if(!isset($_SESSION["username"])){
         header("Location: login.php");
@@ -37,6 +38,7 @@
         ?>
         <h1>Data ikan</h1>
         <a href="insertFish.php" class="btn btn-secondary my-4">Add Fish</a>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
         <table class="table mx-5 table-hover table-stripped">
             <thead>
                 <tr>

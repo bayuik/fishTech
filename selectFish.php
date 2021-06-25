@@ -33,6 +33,7 @@
 <div class="container py-4">
     <h1 class="text-center"><?= $category["NAMA_KATEGORI"] ?></h1>
     <p class="text-center">Jenis-Jenis <?= $category["NAMA_KATEGORI"] ?></p>
+    <input type="search" onkeyup="searchFish()" id="searchFishTitle" class="form-control mr-sm-2 w-25" placeholder="Search">
     <div class="row mt-5">
         <?php while($fish = mysqli_fetch_assoc($resultFish)) : ?>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -48,4 +49,5 @@
         <?php endwhile; ?>
     </div>
 </div>
-<?php require 'components/footer.php' ?>
+<?php require "components/navbar.php"; ?>
+<script src="assets/js/search.js"></script>

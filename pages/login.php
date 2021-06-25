@@ -65,7 +65,7 @@
                 <input type="password" value="<?= $password ?>" placeholder="Password" name="password"
                     class="form-control" id="password">
             </div>
-            <button name="submit" class="btn btn-success w-100">Submit</button>
+            <button name="submit" class="btn btn-success w-100">Login</button>
         </form>
     </div>
 </body>

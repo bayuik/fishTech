@@ -14,7 +14,7 @@
     </div>
 </section>
 
-<section id="showoff-1" class="text-muted py-5" data-aos="fade-up">
+<section id="showoff-1" class="text-muted py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -36,7 +36,7 @@
     </div>
 </section>
 
-<section id="showoff-2" class="bg-light text-muted py-5" data-aos="fade-up">
+<section id="showoff-2" class="bg-light text-muted py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<section id="explore" class="text-dark py-5" data-aos="fade-up">
+<section id="explore" class="text-dark py-5">
     <div class="container">
         <div class="row">
             <div class="col text-center">
@@ -72,7 +72,4 @@
         </div>
     </div>
 </section>
-
-
-
 <?php require 'components/footer.php' ?>

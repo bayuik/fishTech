@@ -3,7 +3,6 @@
 ?>
 
 <!doctype html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +13,7 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top py-2 py-md-0">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top py-2 py-md-0">
         <div class="container">
             <h1><a href="index.php" class="navbar-brand">FishTech</a></h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
