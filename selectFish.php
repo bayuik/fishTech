@@ -5,24 +5,10 @@
     $category = category($idCategory);
 
 ?>
-
 <?php include 'components/navbar.php' ?>
-<section id="ikanHias" class="py-5 d-none d-md-block">
-    <div class="overlay-ikan">
-        <div class="container">
-            <div class="row">
-                <div class="col text-white">
-                    <h1 class="display-3"><?= $category["NAMA_KATEGORI"] ?></h1>
-                    <p class="lead">Kumpulan <?= $category["NAMA_KATEGORI"] ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container pt-5 pt-md-0">
-    <nav>
-        <ol class="breadcrumb bg-white ml-0 mt-4">
+<section class="container">
+    <nav class="pt-5">
+        <ol class="breadcrumb mt-5" id="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             <li class="breadcrumb-item active"><?= $category["NAMA_KATEGORI"] ?></li>
         </ol>
@@ -30,7 +16,7 @@
     <hr>
 </section>
 
-<div class="container py-4">
+<div class="container py-4" id="selectFish">
     <h1 class="text-center"><?= $category["NAMA_KATEGORI"] ?></h1>
     <p class="text-center">Jenis-Jenis <?= $category["NAMA_KATEGORI"] ?></p>
     <input type="search" onkeyup="searchFish()" id="searchFishTitle" class="form-control mr-sm-2 w-25" placeholder="Search">
@@ -49,5 +35,5 @@
         <?php endwhile; ?>
     </div>
 </div>
-<?php require "components/navbar.php"; ?>
+<?php require "components/footer.php"; ?>
 <script src="assets/js/search.js"></script>

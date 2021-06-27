@@ -44,6 +44,7 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Ikan</th>
+                    <th>Kategori</th>
                     <th>File Gambar</th>
                     <th>Deskripsi</th>
                     <th>Reproduksi Ikan</th>
@@ -58,6 +59,7 @@
                 <tr>
                     <th><?= $counter; ?></th>
                     <td><?= $fish["NAMA_IKAN"] ?></td>
+                    <td><?= $Fish[$fish["ID_KATEGORI"]-1]; ?></td>
                     <td><?= $fish["GAMBAR"] ?></td>
                     <td><?= substr($fish["DESKRIPSI"], 0, 15). "..." ?></td>
                     <td><?= substr($fish["REPRODUKSI_IKAN"], 0, 15). "..." ?></td>

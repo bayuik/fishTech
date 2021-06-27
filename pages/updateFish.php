@@ -3,6 +3,7 @@
 
     if(isset($_POST['submit'])){
         $kategoriIkan = $_POST["kategoriIkan"];
+        // die($kategoriIkan);
         $namaIkan = $_POST["namaIkan"];
         $gambarIkan = $_FILES["gambarIkan"]["name"];
         $deskripsiIkan = $_POST["deskripsiIkan"];
@@ -66,8 +67,13 @@
         <div class="form-group">
             <label for="kategoriIkan">Kategori Ikan</label>
             <select id="kategoriIkan" class="form-control" name="kategoriIkan">
-                <?php for($i = 0; $i < count($Fish); $i++): ?>
-                <option value="<?= $i+1 ?>"><?= $Fish[$i] ?></option>
+                <?php for($i = 0; $i < 3; $i++): ?>
+                    <?php if($i+1 == $showData["ID_KATEGORI"]): ?>
+                        <option selected='selected' value='<?= $i+1 ?>'><?= $Fish[$i] ?></option>
+                    <?php else : ?>
+                        <option value='<?= $i+1 ?>'><?= $Fish[$i] ?></option>"
+                    <?php endif; ?>
+                    
                 <?php endfor; ?>
             </select>
         </div>

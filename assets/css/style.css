@@ -5,90 +5,103 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-.nav-item > a {
-    border-bottom: 5px solid #343a40;
+body {
+    background-color: #EFEFEF !important;
 }
 
-.nav-item > a:hover {
+@media only screen and (max-width: 600px) {
+    .col img:first-child {
+        width: 75% !important;
+    }
+
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+#navbar {
+    background-color: #185ADB;
+}
+
+.nav-item>a {
+    border-bottom: 5px solid #185ADB;
+}
+
+.nav-item>a:hover {
     border-bottom-color: white;
     transition: border-color 800ms;
 }
 
+.container a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    background-color: #185ADB;
+}
+
 .dropdown-menu a:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #EFEFEF;
+    font-weight: bold;
 }
 
 #showcase {
-    background: url(../img/showcase2.jpg);
     height: 700px;
     padding-top: 150px;
     background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: #EFEFEF;
+    padding-bottom: 50px;
 }
 
-#showcase h1 {
-    padding-top: 250px;
+#fish1 {
+    background-color: #39A2DB;
+    color: white;
+    margin-top: 100px;
+    padding-top: 50px;
 }
 
-.dark-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 700px;
+#fish2 {
+    background-color: #3EDBF0;
+    color: white;
+    margin-top: -50px;
+    padding-top: 50px;
 }
 
-/* Ikan */
-#ikanHias {
-    background: url(../img/showoff1.jpg
-    );
-    height: 350px;
+#explore {
+    padding-top: 100px;
+    margin-top: -80px;
+    padding-bottom: 100px;
+    background-color: #efefef;
+}
+
+.breadcrumb-item a {
+    color: #39A2DB;
+}
+
+#breadcrumb {
+    background-color: #efefef;
+    border: none;
+}
+
+#header {
     padding-top: 150px;
-    background-size:cover;
-    background-position: top;
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-}
-
-#ikanPredator {
-    background: url(../img/showoff2.jpg);
-    height: 350px;
-    padding-top: 150px;
-    background-size:cover;
-    background-position: bottom;
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-}
-
-#ikanLaut {
-    background: url(../img/showoff1.jpg);
-    height: 350px;
-    padding-top: 150px;
-    background-size:cover;
-    background-position: bottom;
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-}
-
-#ikanHias h1, #ikanPredator h1, #ikanLaut h1 {
-    padding-top: 170px;
-}
-
-.overlay-ikan {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 350px;
 }
 
 .card:hover {
-    box-shadow: 10px 10px 32px -14px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 32px -14px rgba(0, 0, 0, 0.75);
 }
 
 .card {
@@ -104,6 +117,8 @@
     display: inline-block;
 }
 
+
+
 /* about */
 #about {
     margin-top: 50px;
@@ -112,6 +127,13 @@
 /* contact */
 
 #contact {
-    background-color: #0099ff;
+    /* background-color: #0099ff; */
     margin-top: -20px;
+}
+
+#footer {
+    background-color: #185ADB;
+    border-radius: 20px 20px 0 0;
+    color: #efefef;
+    padding: 20px;
 }

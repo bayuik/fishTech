@@ -3,24 +3,26 @@
 <section id="showcase" class="py-5">
     <div class="dark-overlay">
         <div class="container">
-            <div class="row">
-                <div class="col text-center text-white">
-                    <h1 class="display-2">Cari Ikan Favoritmu</h1>
-                    <p class="lead">Disini kami memberikan informasi tentang berbagai jenis ikan</p>
-                    <p>kamu dapat mencari informasi tentang ikan favoritmu disini</p>
+            <div class="row" id="header">
+                <div class="col text-center d-md-flex">
+                    <img src="assets/img/undraw_fish_bowl_uu88.svg" class="headerImage rounded w-50"
+                        alt="Illustration by Anna Antipina from Ouch">
+                    <div class="text-header my-auto pt-5">
+                        <h1>Cari Ikan Favoritmu</h1>
+                        <p class="lead">Disini kami memberikan informasi tentang berbagai jenis ikan</p>
+                        <p>kamu dapat mencari informasi tentang ikan favoritmu disini</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#39A2DB" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,186.7C384,192,480,160,576,160C672,160,768,192,864,213.3C960,235,1056,245,1152,224C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
 
-<section id="showoff-1" class="text-muted py-5">
+<section id="fish1">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <img src="assets/img/showoff1.jpg" class="img-fluid mb-3 rounded shadow">
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-center">
                 <h2>Clown Fish</h2>
                 <p class="lead">Nemo masuk ke dalam jenis ikan badut atau clown fish. Warna oranye terang dan putih,
                     dengan pola bergaris hitam menyerupai badut, sehingga ia disebut ikan badut.</p>
@@ -32,14 +34,21 @@
                     oranye hingga coklat kemerahan, tetapi bisa juga menjadi hitam di beberapa daerah tertentu
                     seperti Northern Territory di Australia </p>
             </div>
+            <div class="col-md-6">
+                <img src="assets/img/clownfish.png" class="img-fluid mb-3 rounded shadow">
+            </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3EDBF0" fill-opacity="1" d="M0,32L48,42.7C96,53,192,75,288,85.3C384,96,480,96,576,112C672,128,768,160,864,160C960,160,1056,128,1152,101.3C1248,75,1344,53,1392,42.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
 
-<section id="showoff-2" class="bg-light text-muted py-5">
+<section id="fish2" class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
+                <img src="assets/img/bluetang.png" alt="" class="img-fluid mb-3 rounded shadow">
+            </div>
+            <div class="col-md-6 text-center">
                 <h2>Blue Tang</h2>
                 <p class="lead">Paracanthurus hepatus (atau yang biasa dikenal dengan nama ikan leter enam atau blue
                     tang) adalah salah satu spesies ikan yang hidup di terumbu karang. </p>
@@ -49,13 +58,11 @@
                     banyak dicari sebagai ikan hias. Ikan ini biasa hidup berpasangan atau berkelompok hingga 10-12
                     ekor</p>
                 <p>Ikan ini populer sebagai Dory dalam film Finding Nemo pada tahun 2003 dan sekuelnya, Finding Dory
-                    yang dirilis tahun 2016. Dalam film tersebut.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="assets/img/showoff2.jpg" alt="" class="img-fluid mb-3 rounded shadow">
+                    yang dirilis tahun 2016.</p>
             </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#efefef" fill-opacity="1" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,170.7C672,171,768,149,864,122.7C960,96,1056,64,1152,58.7C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 </section>
 
 <section id="explore" class="text-dark py-5">

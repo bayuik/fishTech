@@ -21,7 +21,7 @@
 <?php include "components/navbar.php" ?>
 <section class="container pt-5">
     <nav>
-        <ol class="breadcrumb bg-white ml-0 mt-4">
+        <ol class="breadcrumb mt-4" id="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
             <li class="breadcrumb-item"><a href="selectFish.php?idCategory=<?= $idCategory ?>"><?= $category["NAMA_KATEGORI"] ?></a></li>
             <li class="breadcrumb-item active"><?= $fishName ?></li>

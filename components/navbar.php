@@ -6,14 +6,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">                                                                                 
     <title>FishTech</title>
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top py-2 py-md-0">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark py-2 py-md-0 " id="navbar">
         <div class="container">
             <h1><a href="index.php" class="navbar-brand">FishTech</a></h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
@@ -25,7 +24,7 @@
                         <a href="index.php" class="nav-link p-3">HOME</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="" class="nav-link p-3 dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
+                        <a class="nav-link p-3 dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
                             type="button">
                             CATEGORY
                         </a>

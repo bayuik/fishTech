@@ -4,7 +4,7 @@
         die ('koneksi dengan database gagal '. mysqli_connect_error());
     }
     
-    $queryAdmin = "SELECT ID_IKAN, NAMA_IKAN, GAMBAR, DESKRIPSI, REPRODUKSI_IKAN, PERAWATAN FROM ikan";
+    $queryAdmin = "SELECT ID_IKAN, ID_KATEGORI, NAMA_IKAN, GAMBAR, DESKRIPSI, REPRODUKSI_IKAN, PERAWATAN FROM ikan";
     $Fish = ["Ikan Hias", "Ikan Laut", "Ikan Predator"];
 
 
