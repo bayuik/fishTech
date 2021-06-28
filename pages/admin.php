@@ -39,6 +39,7 @@
         <h1>Data ikan</h1>
         <a href="insertFish.php" class="btn btn-secondary my-4">Add Fish</a>
         <a href="logout.php" class="btn btn-danger">Logout</a>
+        <input type="search" onkeyup="searchData()" id="searchData" class="form-control mr-sm-2 w-25 float-right mt-4" placeholder="Search">
         <table class="table mx-5 table-hover table-stripped">
             <thead>
                 <tr>
@@ -56,9 +57,9 @@
             <?php $counter = 1; ?>
             <?php while($fish = mysqli_fetch_assoc($select)): ?>
             <tbody>
-                <tr>
+                <tr class="dataIkan">
                     <th><?= $counter; ?></th>
-                    <td><?= $fish["NAMA_IKAN"] ?></td>
+                    <td class="namaIkan"><?= $fish["NAMA_IKAN"] ?></td>
                     <td><?= $Fish[$fish["ID_KATEGORI"]-1]; ?></td>
                     <td><?= $fish["GAMBAR"] ?></td>
                     <td><?= substr($fish["DESKRIPSI"], 0, 15). "..." ?></td>
@@ -74,6 +75,7 @@
             <?php endwhile; ?>
         </table>
     </div>
+    <script src="../assets/js/search.js"></script>
 
 </body>
 
