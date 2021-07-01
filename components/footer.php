@@ -1,6 +1,6 @@
     <footer class="text-center" id="footer">
         <h5>FishTech</h5>
-        <p>&copy; 2021</p>
+        <a href="pages/admin.php" class="text-white">@<?= date("Y") ?></a>
     </footer>
 
     <script src="assets/js/jquery-3.3.1.js"></script>

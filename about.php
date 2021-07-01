@@ -8,7 +8,7 @@
 
         $teks = "Nama saya: ".$nama . "%0AEmail: ".$email . "%0ANo Telp: " .$phone . "%0A" . $textSaran;
         $wa = str_replace(" ", "%20", $teks);
-        header("Location: https://api.whatsapp.com/send?phone=6282244879410&text=$wa");
+        header("Location: https://api.whatsapp.com/send?phone=6285732549276&text=$wa");
     }
 ?>
 

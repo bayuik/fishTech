@@ -10,19 +10,8 @@
         $password = strip_tags(trim($_POST["password"]));
         $pesan_error="";
 
-        // if (empty($username)) {
-        //     $pesan_error .= "Username belum diisi <br><br>";
-        // }
-    
-        // if (empty($password)) {
-        //     $pesan_error .= "Password belum diisi <br><br>";
-        // }
         $queryLogin = "SELECT * FROM `admin` WHERE username='$username' AND password='$password'";
         $login = mysqli_query($db, $queryLogin);
-    
-        // if(mysqli_num_rows($login) == 0){
-        //     $pesan_error .= "Username dan Password tidak sesuai";
-        // }
 
         if (empty($username)) {
             $pesan_error .= "Username belum diisi <br><br>";
@@ -46,7 +35,7 @@
 
 <body>
     <div class="container mx-auto w-25 mt-5">
-        <h1>Login Admin</h1>
+        <h1 class="text-center">Login Admin</h1>
         <p>Silahkan masuk dengan Akun Anda</p>
         <?php
             if($pesan_error !== ""){
@@ -65,7 +54,10 @@
                 <input type="password" value="<?= $password ?>" placeholder="Password" name="password"
                     class="form-control" id="password">
             </div>
-            <button name="submit" class="btn btn-success w-100">Login</button>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-danger pl-5 pr-5 d-inline-block"><a href="../index.php">Back</a></button>
+                <button name="submit" class="btn btn-success pl-5 pr-5 d-inline">Login</button>
+            </div>
         </form>
     </div>
 </body>
