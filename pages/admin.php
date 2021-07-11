@@ -67,8 +67,7 @@
                     <td><?= substr($fish["PERAWATAN"], 0, 15). "..." ?></td>
                     <td><a href="updateFish.php<?= "?id={$fish["ID_IKAN"]}" ?>" class="btn btn-success btn-sm">Edit</a>
                     </td>
-                    <td><a href="admin.php<?= "?id={$fish["ID_IKAN"]}&filename={$fish["GAMBAR"]}" ?>"
-                            class="btn btn-danger btn-sm">Delete</a></td>
+                    <td><a href="admin.php<?= "?id={$fish["ID_IKAN"]}&filename={$fish["GAMBAR"]}" ?>" class="btn btn-danger btn-sm">Delete</a></td>
                 </tr>
             </tbody>
             <?php $counter++ ?>
